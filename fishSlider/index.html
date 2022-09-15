@@ -13,8 +13,8 @@
   </head>
   <body>
     <div class="overlay">
-      <h1>LION</h1>
-      <span>Wild life</span>
+      <h1>SEA</h1>
+      <span>MARINE LIFE</span>
     </div>
 
     <div class="wrapper">
@@ -47,12 +47,14 @@
       </div>
 
       <div class="fishbox">
-        <p>Asian</p>
+        <p>Green Sea</p>
         <h1>
-          <span id="L">F</span>
-          <span id="I">I</span>
-          <span id="O">S</span>
-          <span id="N">H</span>
+          <span id="T">T</span>
+          <span id="U">U</span>
+          <span id="R">R</span>
+          <span id="T2">T</span>
+          <span id="L">L</span>
+          <span id="E">E</span>
         </h1>
         <div class="circle1"></div>
         <div class="circle2"></div>
@@ -61,7 +63,8 @@
     </div>
 
     <div class="watchnow">
-      <a href="#">watch now!</a>
+      <ion-icon name="play-outline"></ion-icon>
+      <a href="#">Explore now!</a>
     </div>
 
     <div class="media">
@@ -99,25 +102,37 @@
 
       // fish box
 
-      gsap.from("#L", {
+      gsap.from("#T", {
         delay: 2,
         opacity: 0,
         x: -150,
         duration: 0.5,
       });
-      gsap.from("#I", {
-        delay: 2.2,
+      gsap.from("#U", {
+        delay: 2.1,
         opacity: 0,
         y: -150,
         duration: 0.5,
       });
-      gsap.from("#O", {
+      gsap.from("#R", {
+        delay: 2.2,
+        opacity: 0,
+        y: 150,
+        duration: 0.5,
+      });
+      gsap.from("#T2", {
+        delay: 2.3,
+        opacity: 0,
+        y: -150,
+        duration: 0.5,
+      });
+      gsap.from("#L", {
         delay: 2.4,
         opacity: 0,
         y: 150,
         duration: 0.5,
       });
-      gsap.from("#N", {
+      gsap.from("#E", {
         delay: 2.6,
         opacity: 0,
         x: 150,
@@ -128,14 +143,74 @@
         delay: 2.8,
         scale: 0,
       });
+
+      gsap
+        .timeline({ repeat: -1, repeatDelay: 0 })
+        .to(".circle1", {
+          x: 10,
+          y: 10,
+          duration: 2,
+        })
+        .to(".circle1", {
+          x: 10,
+          y: -10,
+          duration: 2,
+        })
+        .to(".circle1", {
+          x: 0,
+          y: 0,
+          duration: 2,
+        });
+
       gsap.from(".circle2", {
         delay: 2.9,
         scale: 0,
       });
+
+      gsap
+        .timeline({ repeat: -1, repeatDelay: 0 })
+        .to(".circle2", {
+          x: 10,
+          y: -10,
+          duration: 2,
+        })
+        .to(".circle2", {
+          x: -10,
+          y: 10,
+          duration: 2,
+        })
+        .to(".circle2", {
+          x: 0,
+          y: 0,
+          duration: 2,
+        });
       gsap.from(".circle3", {
         delay: 3,
         scale: 0,
       });
+
+      gsap
+        .timeline({ repeat: -1, repeatDelay: 0 })
+        .to(".circle3", {
+          x: -10,
+          y: 10,
+          duration: 2,
+        })
+        .to(".circle3", {
+          x: 20,
+          y: -10,
+          duration: 2,
+        })
+        .to(".circle3", {
+          x: -10,
+          y: -10,
+          duration: 2,
+        })
+        .to(".circle3", {
+          x: 0,
+          y: 0,
+          duration: 2,
+        });
 
       //fish box
 
@@ -146,13 +221,50 @@
         ease: Expo.easeInOut,
       });
 
-      gsap.from(".menu-links ul li", 1, {
+      gsap.from(".style div", 1, {
         delay: 3.2,
         opacity: 0,
         x: -100,
         ease: Expo.easeInOut,
         stagger: 0.3,
       });
+
+      gsap.from(".menu-links ul li", 1, {
+        delay: 3.4,
+        opacity: 0,
+        x: -100,
+        ease: Expo.easeInOut,
+        stagger: 0.3,
+      });
+
+      gsap.from(".watchnow", 1, {
+        delay: 3.5,
+        opacity: 0,
+        x: 200,
+        ease: Expo.easeInOut,
+      });
+
+      gsap.from(
+        ".media ul li",
+        1,
+        {
+          delay: 3,
+          opacity: 0,
+          y: 100,
+          ease: Expo.easeInOut,
+          stagger: 0.3,
+        },
+        0.08
+      );
     </script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
